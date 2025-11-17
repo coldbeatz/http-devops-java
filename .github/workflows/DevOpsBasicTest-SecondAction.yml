@@ -10,7 +10,7 @@ on:
 
 jobs:
   myTest:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Print Hello Message
@@ -32,7 +32,16 @@ jobs:
     runs-on: ubuntu-latest
     #needs: [myTest]
 
+    env:
+      VAR1 : "This is Job Level Variable_1"
+      VAR2 : "This is Job Level Variable_2"
+
     steps:
+      - name: Print env Vars
+        run: |
+          echo "Var1 = ${{ env.VAR1 }}"
+          echo "Var2 = ${{ env.VAR2 }}"
+
       - name: Print Hello Message
         run: echo "Hello, World! from myDeploy job"
 
