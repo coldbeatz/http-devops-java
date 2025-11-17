@@ -12,10 +12,14 @@ jobs:
     steps:
       - name: Print Hello Message
         run: echo "Hello, World! from myTest job"
+
       - name: Execute few commands
         run: |
           echo "Hello Message 1"
           echo "Hello Message 2"
+
+      - name: List current folder
+        run: ls
 
   myDeploy:
     runs-on: windows-latest
