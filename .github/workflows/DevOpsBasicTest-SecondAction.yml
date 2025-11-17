@@ -21,6 +21,9 @@ jobs:
       - name: List current folder
         run: ls
 
+      - name: Git Clone my repo
+        uses: actions/checkout@v1
+
   myDeploy:
     runs-on: windows-latest
     needs: [myTest]
