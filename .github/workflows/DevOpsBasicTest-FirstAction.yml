@@ -1,4 +1,4 @@
-name: DevOpsBasicTest-SecondAction
+name: DevOpsBasicTest-FirstAction
 
 on:
   push:
